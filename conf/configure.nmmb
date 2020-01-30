@@ -1,0 +1,34 @@
+SHELL       = /bin/sh
+
+FC          = ftn -g -traceback -openmp -diag-disable 8290,8291 -warn errors
+
+FREE        = -free
+FIXED       = -fixed
+R8          = -r8
+
+FINCS       =
+
+ifeq ($(DEBUG),on)
+  TRAPS     = -ftrapuv -fno-inline -no-ip -fpe0 -ftz -fp-stack-check -check all -check noarg_temp_created
+  OPTS_NMM  = -O0
+  OPTS_GFS  = -O0
+else
+  TRAPS     =
+  OPTS_NMM  = -O0
+  OPTS_GFS  = -O0
+endif
+
+FFLAGS      = $(TRAPS) $(FINCS) -convert big_endian -assume byterecl -fp-model precise
+
+FFLAGS_NMM  = $(OPTS_NMM) $(FFLAGS)
+FFLAGS_GFS  = $(OPTS_GFS) $(FFLAGS) $(FREE)
+FFLAGS_GFSF = $(OPTS_GFS) $(FFLAGS) $(FIXED)
+
+FPP         = -fpp
+CPP         = cpp -P -traditional
+CPPFLAGS    =
+
+AR          = ar
+ARFLAGS     = -r
+
+RM          = rm

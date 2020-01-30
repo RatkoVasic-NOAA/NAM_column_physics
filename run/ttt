@@ -1,0 +1,182 @@
+          90           0           1
+        2013           1          20           0
+           0           0          60
+ F   3600.000     F
+  0.1000000       1.000000      0.0000000E+00
+  0.5000000       500.0000       5.000000    
+ rrtm
+ bmj
+ fer_hires
+ myj
+ myj
+ noah
+           3           0 default           1
+  0.9800000     F
+           0           1
+   1.000000       1.000000      0.8500000      0.8500000    
+ F F F F F
+           2          80          80           2
+           3           3           3           3           3           3
+  0.5500000      -1.000000       1.000000      8.9999995E+09   1.000000    
+   1.000000      0.1600000      0.1600000      0.7000000      0.0000000E+00
+ EEE           24 fer_hires
+   In rad_initialize, before calling radinit
+  si =  0.000000000000000E+000  6.688979919999838E-003  1.666481047868729E-002
+  2.985065802931786E-002  4.609285295009613E-002  6.516090035438538E-002
+  8.674744516611099E-002  0.110468298196793       0.135862499475479     
+  0.162392199039459       0.189442694187164       0.216322496533394     
+  0.242359697818756       0.267614811658859       0.293200314044952     
+  0.321259498596191       0.354088008403778       0.392993509769440     
+  0.438218414783478       0.488941013813019       0.543281316757202     
+  0.598813414573669       0.653433024883270       0.705441772937775     
+  0.753547310829163       0.796862602233887       0.834907114505768     
+  0.867605626583099       0.895289182662964       0.918649375438690     
+  0.938407421112061       0.955164372920990       0.969401299953461     
+  0.981479287147522       0.991638779640198        1.00000000000000     
+  levr=          35  ictm=           1  isol=           0  ico2=           1 
+  iaer=          11  ialb=           2  iems=           0  ntcw=           3
+  np3d=           3  ntoz=           0  iovrsw=           1  iovrlw=           1
+  isubcsw=           0  isubclw=           0  iflip=           0   me=
+           0
+  sashal= F  crick= F  ccnorm= T  norad= F
+ === lw optical property for clouds ===
+  ilwcice=           1  ilwcliq=           1
+ === sw optical property for clouds ===
+  iswcice=           3  iswcliq=           1
+  NEW RADIATION PROGRAM STRUCTURES BECAME OPER.   May 01 2007
+ NCEP-Radiation_driver    v5.2  Jan 2013 
+  - Selected Control Flag settings: ICTMflg=           1  ISOLar =           0 
+  ICO2flg=           1  IAERflg=          11  IALBflg=           2  IEMSflg=
+           0  ICLDflg=           1  ICMPHYS=           3  IOZNflg=           0
+  IVFLIP=           0  IOVRSW=           1  IOVRLW=           1  ISUBCSW=
+           0  ISUBCLW=           0
+  LSASHAL= F  LCRICK= F  LCNORM= T  LNOPREC= F
+  LTP =           1 , add extra top layer = T
+  - ISUBCLW=           0  No McICA, use grid averaged cloud in LW radiation
+  - ISUBCSW=           0  No McICA, use grid averaged cloud in SW radiation
+ NCEP-Radiation_astronomy v5.2  Jan 2013 
+  - Using old fixed solar constant =   1366.00000000000     
+ NCEP-Radiation_aerosols  v5.2  Jan 2013 
+  - Using OPAC-seasonal climatology for tropospheric aerosol effect
+    IAER=          11   LW-trop-aer= T   SW-trop-aer= T   Volc-aer= F
+  - No stratospheric volcanic aerosol effect
+    - Compute multi-band aerosol optical properties for SW input parameters
+    - Compute multi-band aerosol optical properties for LW input parameters
+ NCEP-Radiation_gases     v5.1  Nov 2012 
+  - Using climatology ozone distribution
+    Found ozone data for levels pstr=  3.000000026077032E-003
+  9.999999776482582E-003  2.999999932944775E-002  0.100000001490116     
+  0.300000011920929       0.400000005960464       0.500000000000000     
+  0.699999988079071        1.39999997615814        2.79999995231628     
+   5.59999990463257        11.1899995803833        22.3899993896484     
+   44.7799987792969        89.5599975585938        179.119995117188     
+   506.630004882812     
+  - Using observed co2 global annual mean value
+ NCEP-Radiation_surface   v5.1  Nov 2012 
+  - Using externally provided surface albedo for sw
+  - Using Fixed Surface Emissivity = 1.0 for lw
+ NCEP-Radiation_clouds    v5.1  Nov 2012 
+  - Using Prognostic Cloud Method
+    --- Ferrier cloud microphysics
+  - Using AER Longwave Radiation, Version: 
+ NCEP LW v5.1  Nov 2012 -RRTMG-LW v4.82  
+    --- Include rare gases N2O, CH4, O2, CFCs absorptions in LW
+    --- Using standard grid average clouds, no 
+ sub-column clouds approximation applied
+  - Using AER Shortwave Radiation, Version: 
+ NCEP SW v5.1  Nov 2012 -RRTMG-SW v3.8   
+    --- PIFM 2-stream transfer scheme
+    --- Include rare gases N2O, CH4, O2, absorptions in SW
+    --- Using standard grid average clouds, no 
+ sub-column clouds approximation applied
+    Opened aerosol data file: aerosol.dat               
+    Requested co2 data for year        2013 
+  not found, check for other available data set
+  Looking for CO2 file co2historicaldata_2012.txt
+    Opened co2 data file: co2historicaldata_2012.txt
+        2012 
+  MONTHLY CO2 (PPMV)   24  12  LON/LAT (N-S/0-360E) IN 15 DEGREE RESOLUTION,  GL
+ B ANNUAL MEAN =   393.530000000000        GROWTH RATE =   2.16000000000000     
+    Global annual mean CO2 data for year        2013  3.955299999999999E-004
+ 
+ NTSD=            0
+ RR01    345.0313    
+ RR02    287.7946    
+ RR03    17.65342    
+ RR04  -0.5712506    
+ RR05    309.8635    
+ RR06   0.0000000E+00
+ RR07    271.8861    
+ RR08   0.1342893    
+ RR09    61.78369    
+ RR10           34
+ RR11    281.2230    
+ RR12   4.4337679E-03
+ RR13   0.0000000E+00
+ RR14   0.0000000E+00
+ RR15   0.6609862    
+ RR16    605.6033    
+ RR17   0.0000000E+00
+ RR18   7.3361525E-04
+ RR19    1.000000    
+ RR20  -0.3855472    
+ RR21    1.617259    
+ RR22    288.4590    
+ RR23   1.9715894E-03
+ RR24    287.8277    
+ RR25   1.9715894E-03
+ RR26    88832.69    
+ RR27    88854.41    
+ RR28    278.3637    
+ RR29    8.836179    
+ RR30   -7.562076    
+ RR31    8.836179    
+ RR32   -7.562076    
+ RR33   5.4425180E-07
+ RR34   5.9402828E-07
+ RR35   -8.253693    
+ RR36   -1.797662    
+ RR37    1.000000    
+ RR38    1.000000    
+ RR39    1.000000    
+ 
+ NTSD=          800
+ RR01    310.2299    
+ RR02    245.2484    
+ RR03    230.4846    
+ RR04  -0.6429564    
+ RR05    319.9472    
+ RR06   0.0000000E+00
+ RR07    274.0716    
+ RR08   0.4640536    
+ RR09    220.9691    
+ RR10           32
+ RR11    284.0986    
+ RR12   3.7938128E-03
+ RR13   0.0000000E+00
+ RR14   0.0000000E+00
+ RR15   0.6605440    
+ RR16    605.2611    
+ RR17   0.0000000E+00
+ RR18   3.3567570E-02
+ RR19    1.000000    
+ RR20  -0.7975504    
+ RR21    3.226405    
+ RR22    282.3391    
+ RR23   3.1222859E-03
+ RR24    282.5679    
+ RR25   3.2154578E-03
+ RR26    88160.81    
+ RR27    88182.95    
+ RR28    272.6298    
+ RR29   -37.09948    
+ RR30   -38.36207    
+ RR31   -1065.456    
+ RR32   -1386.764    
+ RR33   9.9807105E-05
+ RR34   1.6261563E-04
+ RR35   -2259.454    
+ RR36   -77.65694    
+ RR37    401.0000    
+ RR38    41.00000    
+ RR39    41.00000    

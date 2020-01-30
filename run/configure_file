@@ -1,0 +1,78 @@
+&configuration
+  INTEGER_DT=90.              ! Integer seconds
+ ,NUMERATOR_DT=0              ! Numerator of fractional second
+ ,IDENOMINATOR_DT=1           ! Denominator of fractional second
+!
+ ,START_YEAR=2013
+ ,START_MONTH=01
+ ,START_DAY=20
+ ,START_HOUR=0
+ ,START_MINUTE=0
+ ,START_SECOND=0
+ ,MINUTES_HISTORY=60
+!
+ ,RESTART=.false.             ! True--> A restarted run
+ ,AVG_MAX_LENGTH=3600.        ! Time in seconds when averaged fields are reset
+ ,RST_OUT_00=.false.          ! True--> Write 00h history in restarted run
+!--- Gravity Wave Drag
+ ,gwdflg=.false.              ! True--> GWD on ; False--> GWD off
+ ,CDMB=0.1                    ! tunable parameter for adjusting mountain blocking
+ ,CLEFF=1.0                   ! tunable parameter, depends on resolution
+ ,SIGFAC=0.0                  ! tunable parameter
+ ,factop=0.50                 ! de-acceleration limiter
+ ,rlolev=500.                 ! critical pressure level (check units)
+ ,dpmin=5.00                  ! minimum thickness of the reference layer (check units)
+!--- Physics Scheme Options
+ ,LONGWAVE='rrtm'             ! rrtm, gfdl
+ ,SHORTWAVE='rrtm'            ! rrtm, gfdl
+ ,CONVECTION='bmj'            ! bmj, sas, sashur, scalecu, none
+ ,MICROPHYSICS='fer_hires'    ! fer, fer_hires, gfs, wsm6, thompson
+ ,TURBULENCE='myj'            ! myj, gfs
+ ,SFC_LAYER='myj'             ! myj
+ ,LAND_SURFACE='noah'         ! noah, liss
+!--- Radiation options
+ ,NP3D=3                      ! 3--> ferrier's microphysics cloud scheme (only stratiform cloud)
+                              ! 4--> zhao/carr/sundqvist microphysics cloud (now available in the NMMB)
+                              ! 5--> NAM stratiform + convective  cloud optical depth and fraction  (GFDL type convective cloud)
+                              ! 8--> Thompson microphysics and special Thompson rrtm SW radiation
+ ,CLDFRACTION='default'       ! default, thompson
+ ,CO2TF=1                     ! Read (0) or generate internally (1) the GFDL CO2 transmission functions
+!--- Microphysics options
+ ,RHGRD=0.98                  ! fer_hires microphysics only
+ ,SPEC_ADV=.false.            ! Individual cloud species advected
+!--- Land surface options
+ ,UCMCALL=0                   ! Use (1) or do not use (0) the Urban Canopy Model
+ ,IVEGSRC=1                   ! Vegetation map identifier, 0--> USGS, 1--> IGBP
+!--- Shallow Convection Switches
+ ,FRES=1.00                   ! resolution factor for dsp's
+ ,FR=1.00                     ! land factor for dsp's
+ ,FSL=0.85                    ! reduction factor for "slow" dsp's over land
+ ,FSS=0.85                    ! reduction factor for "slow" dsp's over water
+ ,ENTRAIN=.false.             ! Entrainment
+ ,NEWALL=.false.              ! New cloud used at all shallow points
+ ,NEWSWAP=.false.             ! New clouds at swap shallow points
+ ,NEWUPUP=.false.             ! New cloud used for both heat and moisture up shallow pts.
+ ,NODEEP=.false.              ! All deep convection diverted to shallow swap algorythm
+!--- Physics Timesteps
+ ,NPHS=2                      ! Number of dynamics timesteps between calls to landsurface and turbulence
+ ,NRADS=80                    ! Number of dynamics timesteps between calls to shortwave
+ ,NRADL=80                    ! Number of dynamics timesteps between calls to longwave
+ ,NPRECIP=2                   ! Number of dynamics timesteps between calls to convection and microphysics
+ ,nhrs_prec=3                 ! Frequency in hours between times when precip arrays are emptied
+ ,nhrs_heat=3                 ! Frequency in hours between times when heating arrays are emptied
+ ,nhrs_clod=3                 ! Frequency in hours between times when cloud arrays are emptied
+ ,nhrs_rdlw=3                 ! Frequency in hours between times when LW radiation arrays are emptied
+ ,nhrs_rdsw=3                 ! Frequency in hours between times when SW radiation arrays are emptied
+ ,nhrs_srfc=3                 ! Frequency in hours between times when sfc evap/flux arrays are emptied
+!--- Hurricane
+ ,sas_pgcon=0.55              ! convectively forced pressure gradient factor,default=0.55
+ ,sas_shal_pgcon=-1           ! convectively forced pressure gradient factor sas  shallow conv, -1 means use sas_pgcon
+ ,sas_shalconv=1              ! 1=enable shallow conv,better with gfspblhur scheme
+ ,sas_mass_flux=9e9           ! mass flux limit,default=9e9
+ ,sas_mommix=1.0              ! SAS momentum mixing coef
+ ,var_ric=1.0                 ! for gfspblhur 
+ ,coef_ric_l=0.16             ! Regression coef for land Ric,default=0.16
+ ,coef_ric_s=0.16             ! Regression coef for sea Ric,default=0.16
+ ,ALPHA=0.7                   ! adjustment coef for K in PBLHUR
+ ,SFENTH=0.0                  ! GFDL surface-layer enhancement coef
+/
